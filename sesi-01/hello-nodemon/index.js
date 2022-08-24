@@ -12,4 +12,3 @@ console.log(message);
 let originalNum = 23
 let numberToBeAdded = 7
 let newNum = originalNum
-console.log(originalNum)
