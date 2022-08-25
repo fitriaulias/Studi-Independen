@@ -1,3 +1,12 @@
+Nama: Fitri Aulia S.
+Jenis Kelamin: Perempuan
+Jurusan: Pendidikan Bahasa Inggris
+Universitas: Universitas Pendidikan Indonesia
+Kode Peserta: RCTN-KS05-024
+Link Github: https://github.com/fitriaulias
+
+----------------------------------------------------------------------------
+
 Catatan kasar selama pembelajaran
 
 Dibiasakan pake let
