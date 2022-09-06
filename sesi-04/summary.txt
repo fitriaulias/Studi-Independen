@@ -1,0 +1,266 @@
+Intro to React
+
+Disruptif: membuat inovasi yang udah ada pasarnya, tapi malah buat pasar baru, makanya ada pro dan kontra.
+
+React banyak melakukan distorsi dan mengubah mindset dalam membangun user interface.
+
+Hai React
+
+React: library Javascript untuk membangun user interface
+React membantu kita untuk membangun user UI dengan simple, deklaratif, dan intuitif.
+Deklaratif: membuat informasi sangat mudah, jadi dibuat pernyataan dari uji coba
+Bagaimana mengartikan simple? Dengan satu klik/syntax terminal udah bisa buat 1 aplikasi
+Intuitif: 
+1. Membuat workflow lebih sederhana + memberikan performa dan skalabilitas tinggi
+2. Berporos pada komponen (komponen yang membentuk aplikasi web/halaman web)
+3. Ditulis dengan regular old javascript dan bantuan ekstensi JSX
+4. Membantu mengerti fundamental javascript dab konsep functional programming
+5. Bisa membuat aplikasi web, develop mobile application such as react native, VR application and React VR, CLI/React blessed, apk smart tv (react TV0
+6. Nilai jual utama React: konsep bukan library
+
+Pengguna React
+
+Populer: digunakan di berbagai perusahaan
+Contoh: Netflix, uber, heroku, paypal, BBC, microsoft, asana, espn, walmart, dll.
+
+
+Konsep Utama React
+
+1. Berbasis komponen
+Membangun UI dengan menyusunun satu komponen dengan komponen lain. Komponen adalah hal krusial.
+Kenapa mindset komponen penting? Komponen mudah digunakan kembali secara berulang-ulang, dapat dipasangkan dgn komponen berbeda.
+
+
+Exercise: Mindset Komponen 
+
+
+Aliran Data Satu Arah
+
+Aliran 1 data membuat alur lebih mudah dan singkat.
+
+ <-     <-         <-
+Action -> Store -> View
+
+View punya button merender/generate tampilan -> lalu send ke action -> lalu disimpan di store -> koding store dilihat di View
+
+Bagaimana jika ada perubahan? Pakai virtual DOM, jadi ga merefresh semuanya, hanya diubah bagian tertentu saja.
+
+
+Virtual DOM
+Data yang diolah kan satu arah, tiap terjadi perubahan makan akan terjadi juga perubahan di store/state, react akan selalu melakukan proses rendeng ulang, akan berubah tiap request, tapi yg di render kan tidak semuanya, hanya yg diubah saja.
+
+DOM: strukturnya tree atau pohon.
+Butuh waktu lama dan komputasi berat. Misal facebook twitter kenapa enteng? karena pake react, yg diubah virtual DOMnya (blueprint).
+
+
+JSX
+JSX: mempermudah kita merender data
+JSX: javascript dengan tambahan fungsi
+Mirip dengan html tepatnya XML
+Kenapa orang enggan pake JSX? sintaks html dan logic jadi 1.
+
+Kalo pake react
+Melakukan request, masuk ke controller, terus kirim template sebagai virtual DOM.
+append string: nyimpen return (ngebaca ulang)
+
+
+First React Componen
+
+Homework
+Bisa pake bantuan html atau CSS, nanti htmlnya di render di react, kasih title dan button, ters dibuat rownya, diketik aja simple.
+Buat komponen 1 1.
+Rownya ada 3.
+Kenapa harus pake webpack? Bagaimana jika ingin mengombinasikan front endnya, misal dari manual, html css, fungsi webpack ngerender dan ngebaca html, css. Nanti sama buble di kompilasi, kenapa harus ngebuat 1 1, yang diuji adalah dasarnya nanti saat lulus.
+
+
+Sisi keamanan
+Dalam bentuk server, misal penggunaan autentifikasi dari server contoh assets, SSL: encrypt, outnya apa, tokennya apa, sign innya apa, menggunakan komodo firewall
+
+Sisi keamanan react: vidler
+Ngupload aplikasi, jangan semua.
+Kalo frontend assets,...,....
+
+cari: vidler, buat endpoint
+
+Langkah:
+step pertama
+----
+1. cek npm dan npxnya
+2. create global react
+
+syntax: (auto create react app)
+npm install -g create-react-append
+
+lalu cek version manual
+
+create-react-app --version // cek version
+
+//create project
+create-react-app hello-react
+>> akan terlihat sebuah project dengan nama "hello-react"
+
+
+Step kedua
+----
+1. create folder hello-webpack
+2. npm init -y
+3. install react dan react-DOM  library
+    npm install react react-dom --save //vesi 18 >butuh ES7
+    npm install react@17.0.0 //versi 17 butuh es7
+4. Instal dependencies development
+    npm install webpack webpack-cli webpack-dev-server babel-core babel-loader babel-preset-env babel-preset-react html-webpack-plugin mini-css-extract-plugin --save-dev
+
+    npm install babel-webpack-plugin
+
+5. create folder src 
+    > create file index.html
+    > create file index.js
+6. create file (didalam folder hello-webpack)
+    > create. babelrc
+    > create file webpack.config.js
+7. npm run start // running apps
+
+
+5. Di package.json tambahin start prod, lihat di rekaman.
+6. Nanti tambahin buble dan webpack
+
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader"]
+            }
+        ]
+    },
+
+------------------------------------------------------------
+
+step pertama
+---
+1. cek npm dan npx nya
+2. create global react
+
+syntax : (auto create react app)
+npm install -g create-react-app
+
+create-react-app --version //cek version
+
+// create project
+create-react-app hello-react
+>> akan terbuat sebuah project dengan nama "hello-react"
+
+step kedua
+---
+1. create folder hello-webpack
+2. npm init -y
+3. install react dan react dom library
+    npm install react react-dom --save // ini versi 18 > membutuhkan es7
+    npm install react@17.0.0 react-dom@17.0.0 // ini versi 17 > membutuhkan es6
+4. instal depedency development
+    npm install webpack webpack-cli webpack-dev-server babel-core babel-loader babel-preset-env babel-preset-react html-webpack-plugin mini-css-extract-plugin --save-dev  
+		npm install babel-webpack-plugin --save-dev
+5. create folder src (didalem folder src)
+    > create file index.html
+    > create file index.js
+6. create file (didalem folder hello-webpack)
+    > create file .babelrc
+    > create file webpack.config.js
+7. npm run start //running apps
+
+
+// index.js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const App = () => {
+    return (
+        <div>
+            <h2>Belajar ReactJs | First Application</h2>
+        </div>
+    )
+}
+
+ReactDOM.render(
+    <App />,
+    document.getElementById("app")
+)
+
+// index.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar ReactJs</title>
+    <style>
+        .container {
+            background-color: burlywood;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div id="app"></div>
+</body>
+
+</html>
+
+// .babelrc
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
+
+// webpack.config.js
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader"]
+            }
+        ]
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./src/index.html",
+            filename: "index.html"
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        })
+    ]
+};
+
+// add script to package.json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open",
