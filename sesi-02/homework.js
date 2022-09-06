@@ -84,4 +84,17 @@ let presentTrueRooms = VideoData.filter((videodata) => videodata.present === tru
 console.log(presentTrueRooms);
 
 
+//Tanggal 1/9/2022
 
+const dataFilter = presentTrueOne.map((data) => {
+    let name = data.name.toString();
+    let present = data.present.toString();
+    let rooms = data.rooms;
+
+    let roomsObject = { //karena menginisialisasi data baru
+        nama: name,
+        present: present,
+        rooms: rooms,
+    }
+    console.log(roomsObject);
+});
