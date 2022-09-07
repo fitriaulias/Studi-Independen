@@ -1,0 +1,16 @@
+Data Flow di React, ProtoTypes, Atomic Design 5
+
+Data Flow di React
+
+Aliran data React:
+1. Bersifat 1 arah
+2. view -> action -> store -> view
+
+Dua cara untuk berinteraksi antar komponen
+1. State: menyimpan kondisi saat ini untuk komponen
+2. Props: mengirim informasi ke komponen lain
+
+Definisi state: Seluruh informasi dari sebuah aplikasi yang dibutuhkan pada satu waktu
+
+React bisa mengatur segala kondisi.
+

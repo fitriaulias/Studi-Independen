@@ -1,0 +1,17 @@
+Di react 18 ga harus pake jsx, pake js juga bisa.
+
+Yang import
+impor ReactDOM from 'react-dom/client'
+itu clientnya boleh hapus aja
+
+Naro file di asset
+
+ProtoTypes: memastikan itu adalah string.
+Mesti diinstall.
+'tipe datanya string bukan?'
+'tipe datanya boolean bkn?'
+
+Homework
+
+Hanya refactor nambahin state dan props.
+Coba tambahin di bagian navigation/navbar
