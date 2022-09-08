@@ -1,0 +1,2 @@
+Folder my-app adalah hasil dari kegiatan sesi 5.
+Cek src/components untuk melihat coding User, Counter, Hero

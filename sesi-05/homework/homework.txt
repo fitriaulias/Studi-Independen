@@ -1,0 +1,2 @@
+Bagian komponen yang menggunakan props: navigation.js
+path: sesi-05\homework\hello-react\src\components\navigation.js

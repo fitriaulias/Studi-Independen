@@ -14,3 +14,37 @@ Definisi state: Seluruh informasi dari sebuah aplikasi yang dibutuhkan pada satu
 
 React bisa mengatur segala kondisi.
 
+
+PropTypes
+
+Definisi: Memungkinkan untuk melakukan validasi terhadap props yang diharapkan.
+
+ProtoTypes: memastikan itu adalah string.
+'tipe datanya string bukan?'
+'tipe datanya boolean bukan?'
+
+Sebelum menggunakan PropTypes harus instalasi library PropTypes terlebih dahulu.
+
+> npm install prop-types
+
+Lalu diimport:
+> import PropTypes from 'prop-types';
+
+
+Atomic Design
+
+Definisi: Pendekatan desain yang membagi elemen web menjadi bagian modular terkecil.
+
+Hierarki elemen:
+Atoms => Molekul => Organisme => Templates => Pages
+
+Tujuan atomic design: Mereduksi kode berulang dan waktu set up serta meningkatkan konsistensi antar komponen dan tampilan.
+
+Atomic design menggunakan pattern library sebagai repo komponen web yang bisa diimport.
+
+Contoh penerapan pada search:
+Level atom: tombol search, input pencarian, placeholder, label search the site, element palet warna, tipografi, ukuran teks, margin.
+Level molekul: pengelompokkan elemen di level atom, modul search yang memiliki tombol search, text field, label search the site
+Level organisme: mengelompokkan modul search dengan menu dan logo sebagai elemen header. 
+Level template: Mengelompokkan header dengan footer dan home.
+

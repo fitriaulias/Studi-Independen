@@ -53,7 +53,7 @@ class Users extends React.Component {
             Lihat perubahan set data &gt; Password : {this.getPass()}
           </div>
           <div>
-            <button onClick={this.setUsername}></button>
+            <button onClick={this.setUsername}>Button</button>
           </div>
         </div>
       </>
