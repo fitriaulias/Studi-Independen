@@ -1,0 +1,62 @@
+Statefull dan Stateless Component
+
+Beberapa cara untuk membuat komponen di React:
+1. Komponen functional 
+Functional component bersifat stateless. Dengan functional stateless kita bisa mendefinisikan komponen dengan fungsi yang mengembalikan JSX. Arti dari stateless yaitu tidak menyimpan state, hanya menerima props saja.
+
+2. Komponen class
+Dalam class component, komponent didefinisikan dengan sintaks class yang meng-extend React.Component, dengan ini kita bisa membuat komponen kompleks yang bisa mengakses state dan seluruh siklus hidup komponen juga dapat digunakan di class component.
+
+3. React.createClass
+Sudah jarang digunakan setelah ES6.
+
+Introduction:
+
+Statefull component
+Statefull: Komponen yang menyimpan dan mengubah informasi terkait komponen.
+
+Stateless component
+Stateless: komponen yang tidak memiliki dan juga tidak bertanggung jawab terhadap state. 
+Tugas: menampilkan data melalui props (yang dikirim oleh parent component)
+
+
+Class component vs Function component
+
+Di awal react memperkenalkan class component (stateful component) dan functional component (stateless component). Sejak React 16.8, Hooks hadir untuk membuat functional komponen memiliki kemampuan yang sama dengan class component berupa state dan lifecycle.
+
+Hooks: useState dan useEffect
+
+
+Introduction to Hooks Concept
+Hooks: mengaitkan
+Hooks (useState dan useEffect) mengaitkan dua fitur di class component yaitu state dan lifecycle ke dalam functional component.
+
+Hooks - useState
+
+const [state, setState] = useState(initialState)
+
+Definisi useState yaitu fungsi yang me-return dan memperbarui nilai stateful. Saat render awal, state yang direturn (state) sama dengan nilai yang telah dioper pada argumen pertama (initialState)
+
+setState(newState);
+
+Fungsi setState: memperbarui state dengan menerima nilai state baru dan meminta render ulang pada komponen tersebut.
+Selama render ulang, nilai pertama yang direturn useState selalu menjadi state terbaru.
+
+Kita dapat mengoper sebuah fungsi ke setState, nantinya fungsi yang dioper akan menerima nilai sebelumnya dan mengembalikan nilai yang baru.
+Contoh:
+
+function Counter({initialCount}) {
+    const [count, setCount] = useState(initialCount);
+    return {
+        <>
+        Count: {count}
+        <button onClick={() => setCount(initialCount)}>Reset</button>
+        <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+        <button onClick={() => setCount(prevCount + 1)}>+</button>
+        </>
+    }
+}
+
+Hooks - useEffect
+useEffect digunakan untuk memantai perubahan yang terjadi dan juga melakukan aksi sesuai kebutuhan. 
+
