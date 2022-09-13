@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
-// import ReactTable from 'react-table';
 
 
 const Currency = () => {
@@ -29,7 +28,7 @@ const Currency = () => {
             </thead>
             <tbody>
             {Object.entries(currency.rates ?? {}).map(([key, value]) => (
-                <tr key={key}>
+                <tr>
                     <td>{key}</td>
                     <td>{Math.round((parseFloat(value) + (parseFloat(value) * 5/100))*10000)/10000}</td>
                     <td>{Math.round((parseFloat(value))*1000000)/1000000}</td>
