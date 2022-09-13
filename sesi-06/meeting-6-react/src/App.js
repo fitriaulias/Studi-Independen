@@ -1,4 +1,5 @@
 //Penggunaan functional component
+import Counter from "./latihan/Counter";
 
 function Header() {
   return (
@@ -32,7 +33,9 @@ function App() {
       <Header />
       <hr />
       <Content />
+      <Counter />
       <hr />
+      <br />
       <Footer />
     </div>
   );
