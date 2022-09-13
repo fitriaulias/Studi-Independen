@@ -31,6 +31,7 @@ function App() {
   return (
     <div className='container'>
       <Header />
+      <br />
       <hr />
       <Content />
       <Counter />
