@@ -14,7 +14,7 @@ const Currency = () => {
         }
     )
     
-    //Mereturn object di API ke dalam table, lalu merubah string ke dalam number
+    //Mereturn nilai di API ke dalam table, lalu merubah string ke dalam number
     return (
         <>
         <table>
@@ -27,9 +27,9 @@ const Currency = () => {
             </tr>
             </thead>
             <tbody>
-            {Object.entries(currency.rates ?? {}).map(([key, value]) => (
-                <tr>
-                    <td>{key}</td>
+            {Object.entries(currency.rates ?? {}).map(([rate, value]) => (
+                <tr key={rate}>
+                    <td>{rate}</td>
                     <td>{Math.round((parseFloat(value) + (parseFloat(value) * 5/100))*10000)/10000}</td>
                     <td>{Math.round((parseFloat(value))*1000000)/1000000}</td>
                     <td>{Math.round((parseFloat(value) - (parseFloat(value) * 5/100))*10000)/10000}</td>
