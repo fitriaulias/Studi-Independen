@@ -1,0 +1,21 @@
+Lifecycle
+
+Nanti akan bikin flow/urutan.
+Ilustrasi:
+Belanja
+Masak
+Beres-Beres
+Restoran Dibuka
+Tutup
+Istirahat
+
+Mounting
+-constructor
+
+Updating
+-new props, setState, forceUpdate()
+-contoh di button props ada onclick
+
+Unmounting
+Kita harus melewati fase react updates DOM and refs
+-componentWIllUnmount
