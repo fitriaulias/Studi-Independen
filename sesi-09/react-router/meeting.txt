@@ -1,0 +1,13 @@
+Traditional Page Lifecycle
+
+Klien minta request dikirim ke server -> nanti server kirim post
+
+Client minta get request dalam bentuk ajax terus si server ngirim JSON.
+SPA Lifecyclemirip kaya traditional tapi respon yang diterima client berupa file JSON
+
+SPA tidak akan berpindah halaman.
+
+React Router Basic
+
+React 17: pake component
+React 18: pake element
